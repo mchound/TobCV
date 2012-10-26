@@ -1,0 +1,98 @@
+body{
+	background-color: #222;
+	padding-top: 50px;
+}
+
+.mainContentContainer{
+	
+	background-color: green;
+	padding-top: 15px;
+	background-image: URL('../img/stripes.png');
+}
+
+.mainContentContainer .personalInfo{
+	height: 200px;
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #ffffff;
+	width: 780px;
+}
+
+.mainContentContainer .personalInfo .portraitContainer{
+	padding: 15px;
+	float : left;
+}
+
+.mainContentContainer .personalInfo .portraitOuter {
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+	padding: 10px;
+	width: 105px;
+}
+
+.mainContentContainer .personalInfo .nameContainer {
+	float: left;
+	margin-left: 20px;
+}
+
+.mainContentContainer .personalInfo .nameContainer h1{
+	display: block;
+	margin: 15px 0px 5px 0px;	
+}
+
+.mainContentContainer .personalInfo .nameContainer span{
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+
+.skills{
+	background-color: #ffffff;	
+	border-top: 1px solid #e1e1e1;
+}
+
+.skills  .skillSection .sectionHeader{
+	background-color: #008000;
+	width: 300px;
+	position: relative;
+	left: -20px;
+	top: 20px;
+	background-image: URL('../img/headerEdge.png');
+	background-repeat: no-repeat;
+	padding: 25px 0px 5px 0px;
+}
+
+.skills  .skillSection .sectionBody{
+	width: 500px;
+	margin-top: 55px;
+	margin-left: 20px;
+	background-color: #fafafa;	
+	border: 1px solid #f1f1f1;
+	padding: 15px;	
+	letter-spacing: 1px;
+}
+
+.skills  .skillSection{
+	height: auto;
+}
+
+.skills .sectionHeader h2{
+	margin: 0px;
+	margin-left: 35px;
+	font: bold 16px Arial;
+	color: #ffffff;
+	letter-spacing: 4px;
+}
+
+.mainContentContainer .personalInfo .contactContainer {
+	float: right;
+	margin-right: 20px;
+	border-top: 1px solid #e1e1e1;
+	padding: 0px 10px 0px 10px;
+}
+
+.mainContentContainer .personalInfo .contactContainer .contactItem{
+	padding-top: 10px;
+}
+
+.mainContentContainer .personalInfo .contactContainer .contactItem img{
+	margin-right: 10px;
+}
