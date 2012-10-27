@@ -44,12 +44,12 @@ body{
 	letter-spacing: 2px;
 }
 
-.skills{
+.cvBody{
 	background-color: #ffffff;	
 	border-top: 1px solid #e1e1e1;
 }
 
-.skills  .skillSection .sectionHeader{
+.cvBody  .cvSection .sectionHeader{
 	background-color: #008000;
 	width: 300px;
 	position: relative;
@@ -60,7 +60,7 @@ body{
 	padding: 25px 0px 5px 0px;
 }
 
-.skills  .skillSection .sectionBody{
+.cvBody  .cvSection .sectionBody{
 	width: 500px;
 	margin-top: 55px;
 	margin-left: 20px;
@@ -70,11 +70,11 @@ body{
 	letter-spacing: 1px;
 }
 
-.skills  .skillSection{
+.cvBody  .cvSection{
 	height: auto;
 }
 
-.skills .sectionHeader h2{
+.cvBody .sectionHeader h2{
 	margin: 0px;
 	margin-left: 35px;
 	font: bold 16px Arial;
