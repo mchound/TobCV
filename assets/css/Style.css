@@ -49,15 +49,25 @@ body{
 	border-top: 1px solid #e1e1e1;
 }
 
-.cvBody  .cvSection .sectionHeader{
+.cvBody .cvSection .sectionHeader{
 	background-color: #008000;
-	width: 300px;
+	width: 260px;
 	position: relative;
 	left: -20px;
 	top: 20px;
 	background-image: URL('../img/headerEdge.png');
 	background-repeat: no-repeat;
-	padding: 25px 0px 5px 0px;
+	padding: 20px 0px 0px 40px;
+}
+
+.cvBody .sectionHeader h2{
+	margin: 0px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 22px;
+	color: #ffffff;
+    letter-spacing: 2px;
+    line-height: 40px;
 }
 
 .cvBody  .cvSection .sectionBody{
@@ -70,24 +80,47 @@ body{
 	letter-spacing: 1px;
 }
 
-.cvBody  .cvSection .sectionBody .header{
+.cvBody .cvSection .sectionBody .header{
 	background-image: url('../img/whiteStripes.png');
 	width: 100%;
-	padding: 5px;	
-	height: 30px;
+	padding: 10px 10px 10px 10px;
 }
+
+    .cvBody .cvSection .sectionBody .header div:nth-child(1){
+        float: left;
+    }
 
 .cvBody  .cvSection .sectionBody .header h1{
 	color: #008000;
 	font: bold 28px Calibri;
 	display: block;
-	float: left;
 	margin: 0;
 }
 
-.cvBody  .cvSection .sectionBody .header span{
+.cvBody  .cvSection .sectionBody .header h2{
+	color: #333;
+	font: normal 16px Calibri;
 	display: block;
-	float: right;
+	margin: 0;
+}
+
+.cvBody .cvSection .sectionBody .header div:nth-child(2){
+        float: right;
+        padding: 5px;
+    }
+
+.sectionBody .header div:nth-child(2) span{
+	display: block;
+    font-family: Calibri;
+    font-size: 18px;
+    font-weight: normal; 
+    line-height: 5px;
+}
+
+.sectionBody .header div:nth-child(2) a {
+    font-family: Calibri;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .cvBody  .cvSection .sectionBody p{
@@ -104,12 +137,17 @@ body{
 	height: auto;
 }
 
-.cvBody .sectionHeader h2{
-	margin: 0px;
-	margin-left: 35px;
-	font: bold 16px Arial;
-	color: #ffffff;
-	letter-spacing: 4px;
+.itemBody > div {
+    padding: 15px;
+}
+
+    .itemBody > div ul {
+        float: left;
+        margin-right: 25px;
+    }
+
+.item {
+    margin-bottom: 65px;
 }
 
 .mainContentContainer .personalInfo .contactContainer {
