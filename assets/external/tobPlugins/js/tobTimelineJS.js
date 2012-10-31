@@ -21,7 +21,7 @@
 				
 				this.$mileStoneMarker = $('<div><span></span></div>');
 				$('.timeline .startStop .line').append(this.$mileStoneMarker);
-				this.$mileStoneMarker.addClass('milestoneMarker even');
+				this.$mileStoneMarker.addClass('milestoneMarker odd');
 				this.$mileStoneMarker.children('span').text('Present');
 				this.$mileStoneMarker.css('margin-right', parseInt(55));
 				
