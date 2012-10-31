@@ -1,11 +1,14 @@
 $(function(){
 	
-	var options = 
-	{
-		sections: ["profileSection", "workExperienceSection", "educationSection", "skillsSection", "additionalInfoSection"]	
-	}
-	
-	//initSectionPosition(options);
+	$(window).scroll(function(){
+		if(scrollPos = $(document).scrollTop() >= 250 ){
+			$('.businessCard').fadeIn('slow', function(){});
+		}
+		else{
+			$('.businessCard').fadeOut('slow', function(){});
+		}
+		
+	});
 	
 	$(".cvBody").timeline();
 	

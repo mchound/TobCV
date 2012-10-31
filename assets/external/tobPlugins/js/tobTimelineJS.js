@@ -17,23 +17,30 @@
 					return a.scrollTop - b.scrollTop
 				});
 				
-				pxPerMonth = parseFloat(830/totalMonthCount);
+				pxPerMonth = parseFloat(792/totalMonthCount);
 				
 				this.$mileStoneMarker = $('<div><span></span></div>');
 				$('.timeline .startStop .line').append(this.$mileStoneMarker);
-				this.$mileStoneMarker.addClass('milestoneMarker');
+				this.$mileStoneMarker.addClass('milestoneMarker even');
 				this.$mileStoneMarker.children('span').text('Present');
 				this.$mileStoneMarker.css('margin-right', parseInt(55));
 				
+				var even = true;
 				$.each(milestones, function(index, milestone){
 					
 					this.$mileStoneMarker = $('<div><span></span></div>');
 					$('.timeline .startStop .line').append(this.$mileStoneMarker);
-					this.$mileStoneMarker.addClass('milestoneMarker');
+					if(even){
+						this.$mileStoneMarker.addClass('milestoneMarker even');
+					}
+					else{
+						this.$mileStoneMarker.addClass('milestoneMarker odd');
+					}
 					this.$mileStoneMarker.children('span').text(milestone.startYear + '-' + milestone.startMonth);
-					milestone.marginRight = parseInt(milestone.monthSpan * pxPerMonth-62);
+					milestone.marginRight = parseInt(milestone.monthSpan * pxPerMonth-53);
 					this.$mileStoneMarker.css('margin-right', milestone.marginRight);
 					
+					even = !even;
 				});
 				
 				if(milestones.length > 0){
