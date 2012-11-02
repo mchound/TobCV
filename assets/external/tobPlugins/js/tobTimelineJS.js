@@ -19,16 +19,16 @@
 				
 				pxPerMonth = parseFloat(792/totalMonthCount);
 				
-				this.$mileStoneMarker = $('<div><span></span></div>');
+				this.$mileStoneMarker = $('<div></div>');
 				$('.timeline .startStop .line').append(this.$mileStoneMarker);
 				this.$mileStoneMarker.addClass('milestoneMarker odd');
-				this.$mileStoneMarker.children('span').text('Present');
+				this.$mileStoneMarker.append('<a href="#present" class="milestoneLink">Present</a>');
 				this.$mileStoneMarker.css('margin-right', parseInt(55));
 				
 				var even = true;
 				$.each(milestones, function(index, milestone){
 					
-					this.$mileStoneMarker = $('<div><span></span></div>');
+					this.$mileStoneMarker = $('<div></div>');
 					$('.timeline .startStop .line').append(this.$mileStoneMarker);
 					if(even){
 						this.$mileStoneMarker.addClass('milestoneMarker even');
@@ -36,7 +36,7 @@
 					else{
 						this.$mileStoneMarker.addClass('milestoneMarker odd');
 					}
-					this.$mileStoneMarker.children('span').text(milestone.startYear + '-' + milestone.startMonth);
+					this.$mileStoneMarker.append('<a href="#' + milestone.label + '" class="milestoneLink">' + milestone.startYear + '-' + milestone.startMonth + '</a>');
 					milestone.marginRight = parseInt(milestone.monthSpan * pxPerMonth-53);
 					this.$mileStoneMarker.css('margin-right', milestone.marginRight);
 					
@@ -82,6 +82,21 @@
 						summedMarginRight += milestone.marginRight + 53;
 					});					
 				});
+
+				$('.milestoneLink').click(function (event) {
+				    var hash = this.hash.replace('#', '');
+				    if (hash == 'present') {
+				        $('html:not(:animated),body:not(:animated)').animate({ scrollTop: milestones[0].scrollTop }, 'slow');
+				    }
+				    else {
+				        $.each(milestones, function (index, milestone) {
+				            if (hash == milestone.label) {
+				                $('html:not(:animated),body:not(:animated)').animate({ scrollTop: milestone.scrollTop }, 'slow');
+				            }
+				        });
+				    }
+				});
+
 			}		
 		});
 		

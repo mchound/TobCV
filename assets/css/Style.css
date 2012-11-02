@@ -92,7 +92,7 @@ body{
 
 .cvBody  .cvSection .sectionBody .header h1{
 	color: #008000;
-	font: bold 28px Calibri;
+	font: bold 24px Calibri;
 	display: block;
 	margin: 0;
 }
@@ -112,14 +112,14 @@ body{
 .sectionBody .header div:nth-child(2) span{
 	display: block;
     font-family: Calibri;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal; 
     line-height: 5px;
 }
 
 .sectionBody .header div:nth-child(2) a {
     font-family: Calibri;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
 }
 

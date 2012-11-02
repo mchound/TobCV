@@ -28,8 +28,9 @@
 	background-color: #008000;
 	float: right;
 	margin-right: 0px;
-	position: relative;
-	top: -25px;
+	position: absolute;
+	top: 20px;
+    right: 17px;
  }
  
  .timeline .startStop .line .milestoneMarker{
@@ -47,17 +48,18 @@
 	margin-top: 15px;
  }
  
- .timeline .startStop .line .milestoneMarker span{
+ .timeline .startStop .line .milestoneMarker a{
 	font-size: 10px;
 	display: block;
 	position: relative;	
 	left: 35px;
+    color: #ffffff;
  }
  
- .timeline .startStop .line .even span{
+ .timeline .startStop .line .even a{
 	top: -20px;
  }
  
- .timeline .startStop .line .odd span{
+ .timeline .startStop .line .odd a{
 	top: 10px;
  }
