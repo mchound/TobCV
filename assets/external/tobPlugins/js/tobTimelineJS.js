@@ -52,7 +52,8 @@
 					var markerPos = 0;
 					var totalScrollDist = 0;
 					var relativeScrollDist = 0;
-					var summedMarginRight = milestones[0].marginRight +53+55;
+					var moveRightDist = 0;
+					var summedMarginRight = 53+55;
 					$('title').text(scrollPos);
 					
 					if(scrollPos < milestones[0].scrollTop){
@@ -67,15 +68,17 @@
 							if(scrollPos >= milestone.scrollTop && scrollPos < milestones[index+1].scrollTop){							
 								totalScrollDist = milestones[index+1].scrollTop - milestone.scrollTop;
 								relativeScrollDist = scrollPos - milestone.scrollTop;
-								markerPos = parseInt((relativeScrollDist/totalScrollDist)*(milestones[index+1].marginRight + 53) + summedMarginRight);
+								moveRightDist = milestones[index + 1].marginRight + 53;
+								markerPos = parseInt((relativeScrollDist / totalScrollDist) * moveRightDist + summedMarginRight + milestone.marginRight);
 								$('.timeMarker').css('margin-right', markerPos);
 							}
 						}
 						else{
 							if(scrollPos >= milestone.scrollTop && scrollPos < milestone.scrollTop+500){							
 								totalScrollDist = milestone.scrollTop+500 - milestone.scrollTop;
-								relativeScrollDist = scrollPos - milestone.scrollTop;	
-								markerPos = parseInt((relativeScrollDist/totalScrollDist)*(milestone.marginRight + 53) + summedMarginRight);
+								relativeScrollDist = scrollPos - milestone.scrollTop;
+								moveRightDist = milestones[index + 1].marginRight + 53;
+								markerPos = parseInt((relativeScrollDist / totalScrollDist) * moveRightDist + summedMarginRight);
 								$('.timeMarker').css('margin-right', markerPos);
 							}
 						}						
