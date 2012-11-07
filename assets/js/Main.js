@@ -12,7 +12,26 @@ $(function(){
 	
 	$(".cvBody").timeline();
 	
-	
+	$('button').click(function () {
+	    var styleSheets = document.styleSheets;
+	    var appStyleSheet;
+	    var cssRule;
+	    $.each(styleSheets, function (index, styleSheet) {
+	        if (styleSheet.title == 'app') {
+	            appStyleSheet = styleSheet;
+	            return false;
+	        }
+	    });
+
+	    $.each(appStyleSheet.rules, function (index, rule) {
+	        if (rule.selectorText == '.applicationColor') {
+	            cssRule = rule;
+	            return false;
+	        }
+	    });
+
+	    cssRule.style.backgroundColor = $('input').val();
+	});
 
 });
 

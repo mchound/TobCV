@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0A99116-04F0-4403-A188-E8E732DF9105}"
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
+		index2.html = index2.html
 		assets\css\Style.css = assets\css\Style.css
 	EndProjectSection
 EndProject
@@ -15,6 +16,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{F57ADAF3-9020-4658-BE38-A95A872A5350}"
 	ProjectSection(SolutionItems) = preProject
 		assets\css\Style.css = assets\css\Style.css
+		assets\css\styles.less = assets\css\styles.less
+		assets\css\styles2.css = assets\css\styles2.css
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{EF37BFBB-8F99-4FDD-9880-25F05FAF1A69}"
@@ -33,6 +36,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{C8FB248C-1C8
 		assets\img\gw.png = assets\img\gw.png
 		assets\img\headerEdge.png = assets\img\headerEdge.png
 		assets\img\mail_icon.png = assets\img\mail_icon.png
+		assets\img\shadow.png = assets\img\shadow.png
 		assets\img\stripes.png = assets\img\stripes.png
 		assets\img\whiteStripes.png = assets\img\whiteStripes.png
 	EndProjectSection
@@ -85,6 +89,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{8430388F-3A5
 		assets\external\tobPlugins\img\timelineBg.png = assets\external\tobPlugins\img\timelineBg.png
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "less", "less", "{972D1055-E51F-4EE1-8176-7D06298D4955}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{CAD986C4-94F8-49FA-8E30-BD323C870581}"
+	ProjectSection(SolutionItems) = preProject
+		assets\external\less\js\less-1.3.1.min.js = assets\external\less\js\less-1.3.1.min.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +109,7 @@ Global
 		{BECEB494-301E-4D56-A949-9528B9C6E655} = {5B7A7579-1629-430D-8978-E754CCE4C8FD}
 		{6B03A474-86DD-4A56-903B-63795DA98CB5} = {5B7A7579-1629-430D-8978-E754CCE4C8FD}
 		{9FC03592-435F-4259-BA14-81BB211BA64F} = {5B7A7579-1629-430D-8978-E754CCE4C8FD}
+		{972D1055-E51F-4EE1-8176-7D06298D4955} = {5B7A7579-1629-430D-8978-E754CCE4C8FD}
 		{05D24D36-1681-4D6B-AB0F-7EB9E54060F0} = {BECEB494-301E-4D56-A949-9528B9C6E655}
 		{33B2FC52-C931-4D93-9CA2-9ADA1B18DE29} = {BECEB494-301E-4D56-A949-9528B9C6E655}
 		{492A9544-DF9E-45A3-AE13-B05EBA16030C} = {BECEB494-301E-4D56-A949-9528B9C6E655}
@@ -105,5 +117,6 @@ Global
 		{27F0F04B-E724-419B-AC96-D025D7153A33} = {9FC03592-435F-4259-BA14-81BB211BA64F}
 		{2A6FA421-C6F5-40BA-A53D-FEF06F13B9C5} = {9FC03592-435F-4259-BA14-81BB211BA64F}
 		{8430388F-3A53-4320-BA66-1F870D720D33} = {9FC03592-435F-4259-BA14-81BB211BA64F}
+		{CAD986C4-94F8-49FA-8E30-BD323C870581} = {972D1055-E51F-4EE1-8176-7D06298D4955}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,191 @@
+/* Core & reset
+======================================================*/
+body{
+    background-color: #222;
+    font-family: Calibri;
+    color: #333;
+    letter-spacing: 2px;
+    padding-top: 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    text-align: justify;
+    margin: 0;
+}
+
+a {
+  color: #0088cc;
+  text-decoration: none;
+
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+.appBgColor {
+    background-color: #0099CC;
+}
+
+.appFontColor {
+    color: #0099CC;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 780px;
+}
+
+.topBorder {
+    display: none;
+}
+
+/* Application specific
+======================================================*/
+
+/* Top section. Header, personal info
+======================================================*/
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.portraitContainer {
+    float: left;
+    border: 0px solid red;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #e1e1e1;
+}
+
+    .portraitContainer img {
+        display: block;
+    }
+
+.personalInfoContainer {
+    float: left;
+    border: 0px solid red;
+    width: 580px;
+    margin-left: 30px;
+}
+
+    .personalInfoContainer > div:nth-child(1) {
+        border-bottom: none;
+    }
+
+    .personalInfoContainer > div:nth-child(2) {
+        float: right;
+        margin-top: 13px;
+    }
+
+.contactItem {
+    padding: 4px;
+}
+
+/* Main body
+======================================================*/
+
+.mainBody {
+    background-image: url('../img/shadow.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: none;
+}
+
+.section {
+    padding: 20px 40px 0px 40px;
+}
+
+.sectionHeader {
+	width: 100%;
+	position: relative;
+	left: 0px;
+	background-image: URL('../img/headerEdge.png');
+	background-repeat: no-repeat;
+	padding: 0px 0px 0px 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+    .sectionHeader h2 {
+        color: #ffffff;
+        line-height: 40px;
+    }
+
+.sectionBody {
+    width: 100%;
+    margin-top: 20px;    
+}
+
+.sectionItem {
+    margin: 40px 0px 0px 0px;
+}
+
+/* Item header, top info */
+.itemHeader {
+    width: 100%;    
+}
+
+    .itemHeader > div {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .itemHeader > div:nth-child(1) {
+        float: left;
+    }
+
+    .itemHeader > div:nth-child(2) {
+        padding: 10px;
+        float: right;
+    }
+
+        .itemHeader > div:nth-child(2) span {
+            display: block;
+        }
+
+/* Item body, content */
+.itemBody {
+    padding: 10px 20px 10px 20px;
+}
+
+    .itemBody div {
+        display: block;
+        float: right;
+        max-width: 500px;
+    }
+
+    .itemBody ul {
+        float: left;
+        display: block;
+    }
+
+    .itemBody p {
+        display: block;
+        margin-left: 15px;
+    }

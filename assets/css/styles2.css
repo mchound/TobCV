@@ -1,0 +1,290 @@
+/* Core & reset
+======================================================*/
+body{
+	padding-top: 50px;
+    background-color: #222;
+    font-family: Calibri;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p {
+    text-align: justify;
+    margin: 0;
+}
+
+a {
+  color: #0088cc;
+  text-decoration: none;
+
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+.appBgColor {
+    background-color: #0099CC;
+}
+
+.appFontColor {
+    color: #0099CC;
+}
+
+/* clearfix for IE7 */
+*+html .clearfix{
+  min-height: 1%;
+}
+
+/* clearfix for others */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 780px;
+}
+
+.topBorder {
+    width: 100%;
+    background-image: url('../img/stripes.png');
+    height: 20px;
+}
+
+/* Application specific
+======================================================*/
+
+/* Top section. Header, personal info
+======================================================*/
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.portraitContainer {
+    float: left;
+    border: 0px solid red;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #e1e1e1;
+}
+
+    .portraitContainer img {
+        display: block;
+    }
+
+.personalInfoContainer {
+    float: left;
+    border: 0px solid red;
+    margin-right: auto;
+    margin-left: 25px;
+}
+
+    .personalInfoContainer > div:nth-child(1) {
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .personalInfoContainer > div:nth-child(2) {
+        float: right;
+        margin-top: 32px; /* If you want the bottom of the contact information to align to the bottom of the portrait: Change this to portrait-height - 128px*/
+    }
+
+.contactItem {
+    padding: 4px;
+}
+
+/* Main body
+======================================================*/
+
+.mainBody {
+    background-image: url('../img/shadow.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e1e1e1;
+}
+
+.section {
+    padding: 20px 40px 0px 40px;
+}
+
+.sectionHeader {
+	width: 260px;
+	position: relative;
+	left: -60px;
+	background-image: URL('../img/headerEdge.png');
+	background-repeat: no-repeat;
+	padding: 20px 0px 0px 40px;
+    border-bottom-right-radius: 15px;
+}
+
+    .sectionHeader h2 {
+        color: #ffffff;
+        line-height: 40px;
+    }
+
+.sectionBody {
+    width: 100%;
+    margin-top: 20px;    
+}
+
+.sectionItem {
+    margin: 40px 0px 0px 0px;
+}
+
+/* Item header, top info */
+.itemHeader {
+    width: 100%;
+    background-image: url('../img/whiteStripes.png');
+}
+
+    .itemHeader > div {
+        padding: 10px;
+    }
+
+    .itemHeader > div:nth-child(1) {
+        float: left;
+    }
+
+    .itemHeader > div:nth-child(2) {
+        padding: 10px;
+        float: right;
+    }
+
+        .itemHeader > div:nth-child(2) span {
+            display: block;
+        }
+
+/* Item body, content */
+.itemBody {
+    padding: 10px;
+}
+
+    .itemBody div {
+        display: block;
+        float: right;
+        max-width: 500px;
+    }
+
+    .itemBody ul {
+        float: left;
+        display: block;
+    }
+
+    .itemBody p {
+        display: block;
+        margin-left: 15px;
+    }
+
+@media print { 
+ /* All your print styles go here */
+     .itemHeader {
+        width: 100%;
+        border-bottom: Green;
+    }
+
+        .itemHeader > div {
+            padding: 10px;
+        }
+
+        .itemHeader > div:nth-child(1) {
+            float: left;
+        }
+
+        .itemHeader > div:nth-child(2) {
+            padding: 10px;
+            float: right;
+        }
+
+            .itemHeader > div:nth-child(2) span {
+                display: block;
+            }
+}
+
+/* Skills */
+.skill {
+    margin-bottom: 25px;
+}
+
+    .skill h2 {
+        color: #646464;
+    }
+
+.skillRate {
+    width: 340px;
+    height: 20px;
+    border: 1px solid #e1e1e1;
+    background-color: #fcfcfc;
+    margin: 5px 0px 0px 0px;
+}
+
+[class*="skillsLevel"] {
+    background-image: url('../img/rateEdge.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 20px;
+    padding-left: 10px;    
+    color: #ffffff;
+}
+
+.skillsLevel10 {
+    width: 60px;    
+}
+
+.skillsLevel20 {
+    width: 90px;    
+}
+
+.skillsLevel30 {
+    width: 120px;    
+}
+
+.skillsLevel40 {
+    width: 150px;    
+}
+
+.skillsLevel50 {
+    width: 180px;    
+}
+
+.skillsLevel60 {
+    width: 210px;    
+}
+
+.skillsLevel70 {
+    width: 240px;    
+}
+
+.skillsLevel80 {
+    width: 270px;    
+}
+
+.skillsLevel90 {
+    width: 300px;    
+}
+
+.skillsLevel100 {
+    width: 330px;    
+}
