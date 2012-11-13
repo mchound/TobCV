@@ -1,11 +1,15 @@
 /* Core & reset
-======================================================*/
+===================================================================================*/
 body{
 	padding-top: 50px;
     background-color: #222;
     font-family: Calibri;
     color: #333;
     letter-spacing: 2px;
+}
+
+div, ul, p, h1, h2, img {
+    display: block;
 }
 
 ul {
@@ -42,11 +46,11 @@ a:hover {
 }
 
 .appBgColor {
-    background-color: #0099CC;
+    background-color: #336600;
 }
 
 .appFontColor {
-    color: #0099CC;
+    color: #336600;
 }
 
 /* clearfix for IE7 */
@@ -74,7 +78,7 @@ a:hover {
 }
 
 /* Application specific
-======================================================*/
+===================================================================================*/
 
 /* Top section. Header, personal info
 ======================================================*/
@@ -91,10 +95,6 @@ a:hover {
     border: 1px solid #e1e1e1;
 }
 
-    .portraitContainer img {
-        display: block;
-    }
-
 .personalInfoContainer {
     float: left;
     border: 0px solid red;
@@ -108,7 +108,7 @@ a:hover {
 
     .personalInfoContainer > div:nth-child(2) {
         float: right;
-        margin-top: 32px; /* If you want the bottom of the contact information to align to the bottom of the portrait: Change this to portrait-height - 128px*/
+        margin-top: 32px; /* If you want the bottom of the contact information align to the bottom of the portrait: Change this to [portrait height] - 128px*/
     }
 
 .contactItem {
@@ -151,7 +151,7 @@ a:hover {
 }
 
 .sectionItem {
-    margin: 40px 0px 0px 0px;
+    margin-top: 40px;
 }
 
 /* Item header, top info */
@@ -169,7 +169,6 @@ a:hover {
     }
 
     .itemHeader > div:nth-child(2) {
-        padding: 10px;
         float: right;
     }
 
@@ -183,19 +182,120 @@ a:hover {
 }
 
     .itemBody div {
-        display: block;
         float: right;
         max-width: 500px;
+        margin-left: 15px;
     }
 
     .itemBody ul {
         float: left;
-        display: block;
     }
 
-    .itemBody p {
-        display: block;
-        margin-left: 15px;
+/* Skills */
+.skill {
+    margin-bottom: 25px;
+}
+
+    .skill h2 {
+        color: #646464;
+    }
+
+.skillRatingBox {
+    width: 340px;
+    height: 20px;
+    border: 1px solid #e1e1e1;
+    background-color: #fcfcfc;
+    margin-top: 5px;
+}
+
+[class*="skillLevel"] {
+    background-image: url('../img/skillOverlay.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 20px;
+    padding-left: 10px;    
+    color: #ffffff;
+}
+
+.skillLevel10 {
+    width: 60px;    
+    content: "10%";
+}
+
+    .skillLevel10:after {
+        content: "10%";
+    }
+
+.skillLevel20 {
+    width: 90px;    
+}
+
+    .skillLevel20:after {
+        content: "20%";
+    }
+
+.skillLevel30 {
+    width: 120px;    
+}
+
+    .skillLevel30:after {
+        content: "30%";
+    }
+
+.skillLevel40 {
+    width: 150px;    
+}
+
+    .skillLevel40:after {
+        content: "20%";
+    }
+
+.skillLevel50 {
+    width: 180px;    
+}
+
+    .skillLevel50:after {
+        content: "50%";
+    }
+
+.skillLevel60 {
+    width: 210px;    
+}
+
+    .skillLevel60:after {
+        content: "60%";
+    }
+
+.skillLevel70 {
+    width: 240px;    
+}
+
+    .skillLevel70:after {
+        content: "70%";
+    }
+
+.skillLevel80 {
+    width: 270px;    
+}
+
+    .skillLevel80:after {
+        content: "80%";
+    }
+
+.skillLevel90 {
+    width: 300px;    
+}
+
+    .skillLevel90:after {
+        content: "90%";
+    }
+
+.skillLevel100 {
+    width: 330px;    
+}
+
+    .skillLevel100:after {
+        content: "100%";
     }
 
 @media print { 
@@ -221,70 +321,4 @@ a:hover {
             .itemHeader > div:nth-child(2) span {
                 display: block;
             }
-}
-
-/* Skills */
-.skill {
-    margin-bottom: 25px;
-}
-
-    .skill h2 {
-        color: #646464;
-    }
-
-.skillRate {
-    width: 340px;
-    height: 20px;
-    border: 1px solid #e1e1e1;
-    background-color: #fcfcfc;
-    margin: 5px 0px 0px 0px;
-}
-
-[class*="skillsLevel"] {
-    background-image: url('../img/rateEdge.png');
-    background-position: top right;
-    background-repeat: no-repeat;
-    height: 20px;
-    padding-left: 10px;    
-    color: #ffffff;
-}
-
-.skillsLevel10 {
-    width: 60px;    
-}
-
-.skillsLevel20 {
-    width: 90px;    
-}
-
-.skillsLevel30 {
-    width: 120px;    
-}
-
-.skillsLevel40 {
-    width: 150px;    
-}
-
-.skillsLevel50 {
-    width: 180px;    
-}
-
-.skillsLevel60 {
-    width: 210px;    
-}
-
-.skillsLevel70 {
-    width: 240px;    
-}
-
-.skillsLevel80 {
-    width: 270px;    
-}
-
-.skillsLevel90 {
-    width: 300px;    
-}
-
-.skillsLevel100 {
-    width: 330px;    
 }
