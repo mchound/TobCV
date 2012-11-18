@@ -5,7 +5,7 @@ body{
     background-color: #222;
     font-family: Calibri;
     color: #333;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
 }
 
 div, ul, p, h1, h2, img {
@@ -189,6 +189,13 @@ a:hover {
 
     .itemBody ul {
         float: left;
+        letter-spacing: 0px;
+    }
+
+    .itemBody p {
+        display: block;
+        margin-left: 15px;
+        letter-spacing: 0px;
     }
 
 /* Skills */
