@@ -3,18 +3,30 @@
     $.extend($.fn, {
 
         popover: function () {
-            var id = $(this).attr('id');
+            var hide = true;
             $(this).parent().css('position', 'relative');
-            var popover = $('[tobPopoverId="' + id + '"]');
+            var width = $(this).siblings('b').width() + $(this).width() + 10;
+            var obj = $(this).siblings('div');
+            $(obj).css('left', width + 'px');
             $(this).hover(
                 // mouseIn
-                function () {
-                    $(popover).fadeIn(300);
+                function () {                    
+                    $(obj).fadeIn(300);
                 },
                 // mouseOut
                 function () {
-                    $(popover).hide();
+                    if (hide) {
+                        $(obj).hide();
+                    }
                 });
+
+            $(this).click(function (e) {
+                e.preventDefault();
+                hide = !hide;
+                if (hide) {
+                    $(obj).css('display', 'none');
+                }
+            });
         }
 
     });

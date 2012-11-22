@@ -1,8 +1,57 @@
 .tobPopover {
-    width: 200px;
-    height: 100px;
-    background: #e1e1e1;
+    background-color: #f1f1f1;
+    border-width: 1px;
+    border-top-width: 6px;
+    border-style: solid;
     position: absolute;
     display: none;
-    top: -100px;
+    top: -50%;
+    left: 0px;
+    padding: 10px;
 }
+
+.tobPopover h2{
+	font-size: 20px;
+	margin: 5px 0px 0px 5px;
+	display: block;
+	line-height: 18px;
+}
+
+.tobPopover h3{
+	font-size: 12px;
+	margin: 4px 0px 0px 5px;
+	display: block;
+	line-height: 10px;
+}
+
+.tobPopover span{
+	font-size: 14px;
+	margin-left: 5px;
+	line-height: 20px;
+    display: block;
+    clear: left;
+}
+
+.tobPopover a{
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.tobPopover .delimiter{
+	width: 100%;
+	border-bottom: 1px solid #ffffff;
+	border-top: 1px solid #e1e1e1;
+	margin: 10px 0px 10px 0px
+}
+    .tobPopover .arrow {
+        width: 0; 
+	    height: 0; 
+	    border-top: 10px solid transparent;
+	    border-bottom: 10px solid transparent;	
+	    border-right-width: 10px;
+        border-right-style: solid;
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -10px;
+    }

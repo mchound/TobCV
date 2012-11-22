@@ -53,6 +53,10 @@ a:hover {
     color: #336600;
 }
 
+.appBorderColor {
+    border-color: #336600;
+}
+
 /* clearfix for IE7 */
 *+html .clearfix{
   min-height: 1%;
@@ -308,50 +312,49 @@ a:hover {
 /* Buisness card
 ======================================================*/
 .businessCard{
-	display: block;
-	height: 120px;
+	display: block;	
 	background-color: #f1f1f1;
-	border-top: 6px solid #008000;
-	border-bottom: 0px solid #008000;
-	width: 220px;
+	border-top-width: 6px;
+    border-top-style: solid;
 	position: fixed;
 	left: 25px;
 	top: 25px;
 	display: none;
+    padding: 10px;
 }
 
 .businessCard h2{
-	font-size: 18px;
+	font-size: 20px;
 	margin: 5px 0px 0px 5px;
 	display: block;
 	line-height: 18px;
 }
 
 .businessCard h3{
-	font-size: 10px;
+	font-size: 12px;
 	margin: 4px 0px 0px 5px;
 	display: block;
 	line-height: 10px;
 }
 
 .businessCard span{
-	font-size: 12px;
+	font-size: 14px;
 	margin-left: 5px;
-	line-height: 0px;
+	line-height: 20px;
+    display: block;
+    clear: left;
 }
 
 .businessCard a{
-	font-size: 10px;
+	font-size: 14px;
 	margin-left: 5px;
-	line-height: 0px;
 }
 
 .businessCard .delimiter{
-	height: 0px;
-	width: 200px;
+	width: 100%;
 	border-bottom: 1px solid #ffffff;
 	border-top: 1px solid #e1e1e1;
-	margin: 10px 0px 0px 5px
+	margin: 10px 0px 10px 0px
 }
 
 @media print { 

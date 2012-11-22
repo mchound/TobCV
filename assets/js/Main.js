@@ -2,15 +2,16 @@ $(function(){
 	
 	$(window).scroll(function(){
 		if(scrollPos = $(document).scrollTop() >= 250 ){
-			$('.businessCard').fadeIn('slow', function(){});
+			$('#businessCard').fadeIn('slow', function(){});
 		}
 		else{
-			$('.businessCard').fadeOut('slow', function(){});
+			$('#businessCard').fadeOut('slow', function(){});
 		}		
 	});
 	
     //$(".cvBody").timeline();
 
-    $('#Napoleon').popover();
+	$('#Napoleon').popover(); 
+	$('#Governor_Dinwiddie').popover();
 
 });
