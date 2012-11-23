@@ -11,7 +11,20 @@ $(function(){
 	
     //$(".cvBody").timeline();
 
-	$('#Napoleon').popover(); 
-	$('#Governor_Dinwiddie').popover();
+	$('#Napoleon').popover({
+	    name: 'Napoleon Bonaparte',
+	    title: 'Commander in Chief',
+	    webSite: 'www.napoleon.com',
+	    mail: 'napoleon.bonaparte@napoleon.fr',
+	    phone: '+46 (0)72-553 25 85'
+	});
+
+	$('#Governor_Dinwiddie').popover({
+	    name: 'Governor Dinwiddie',
+	    title: 'Governor',
+	    webSite: 'www.napoleon.com',
+	    mail: 'napoleon.bonaparte@napoleon.fr',
+	    phone: '+46 (0)72-553 25 85'
+	});
 
 });

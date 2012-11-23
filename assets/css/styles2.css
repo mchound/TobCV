@@ -323,39 +323,46 @@ a:hover {
     padding: 10px;
 }
 
-.businessCard h2{
-	font-size: 20px;
-	margin: 5px 0px 0px 5px;
-	display: block;
-	line-height: 18px;
-}
+    .businessCard h2{
+	    font-size: 20px;
+	    margin: 5px 0px 0px 5px;
+	    display: block;
+	    line-height: 18px;
+    }
 
-.businessCard h3{
-	font-size: 12px;
-	margin: 4px 0px 0px 5px;
-	display: block;
-	line-height: 10px;
-}
+    .businessCard h3{
+	    font-size: 12px;
+	    margin: 4px 0px 0px 5px;
+	    display: block;
+	    line-height: 10px;
+    }
 
-.businessCard span{
-	font-size: 14px;
-	margin-left: 5px;
-	line-height: 20px;
-    display: block;
-    clear: left;
-}
+    .businessCard span{
+	    font-size: 14px;
+	    margin-left: 5px;
+	    line-height: 20px;
+        display: block;
+        clear: left;
+    }
 
-.businessCard a{
-	font-size: 14px;
-	margin-left: 5px;
-}
+        .businessCard span p {
+                font-size: 14px;
+	            margin-left: 5px;
+                clear: none;
+                display: inline;
+            }
 
-.businessCard .delimiter{
-	width: 100%;
-	border-bottom: 1px solid #ffffff;
-	border-top: 1px solid #e1e1e1;
-	margin: 10px 0px 10px 0px
-}
+    .businessCard a{
+	    font-size: 14px;
+	    margin-left: 5px;
+    }
+
+    .businessCard .delimiter{
+	    width: 100%;
+	    border-bottom: 1px solid #ffffff;
+	    border-top: 1px solid #e1e1e1;
+	    margin: 10px 0px 10px 0px
+    }
 
 @media print { 
  /* All your print styles go here */
