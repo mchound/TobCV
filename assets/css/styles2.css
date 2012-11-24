@@ -46,15 +46,15 @@ a:hover {
 }
 
 .appBgColor {
-    background-color: #336600;
+    background-color: #3333CC;
 }
 
 .appFontColor {
-    color: #336600;
+    color: #3333CC;
 }
 
 .appBorderColor {
-    border-color: #336600;
+    border-color: #3333CC;
 }
 
 /* clearfix for IE7 */

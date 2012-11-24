@@ -16,15 +16,22 @@ $(function(){
 	    title: 'Commander in Chief',
 	    webSite: 'www.napoleon.com',
 	    mail: 'napoleon.bonaparte@napoleon.fr',
-	    phone: '+46 (0)72-553 25 85'
+	    phone: '+46 (0)70-123 45 67'
 	});
 
 	$('#Governor_Dinwiddie').popover({
 	    name: 'Governor Dinwiddie',
 	    title: 'Governor',
-	    webSite: 'www.napoleon.com',
-	    mail: 'napoleon.bonaparte@napoleon.fr',
-	    phone: '+46 (0)72-553 25 85'
+	    webSite: 'www.dinwiddie.gov',
+	    mail: 'governor@dinwiddie.gov',
+	    phone: '+46 (0)70-987 65 43'
+	});
+
+	$('#lord_fairfax').popover({
+	    name: 'Thomas Lord Fairfax',
+	    title: 'General',
+	    mail: 'fairfax@parlament.com',
+	    phone: '+46 (0)70-111 22 33'
 	});
 
 });

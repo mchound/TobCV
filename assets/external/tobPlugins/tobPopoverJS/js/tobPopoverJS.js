@@ -54,7 +54,7 @@
 })(jQuery);
 
 function CreateCardContent(cardContent){
-    var content = '<div class="tobPopover appBorderColor"><h2>' + cardContent.name + '</h2>';
+    var content = '<div class="tobPopover appBorderColor"><div><h2>' + cardContent.name + '</h2></div>';
 
     if(cardContent.title != undefined || cardContent.title != "")
         content += '<h3>' + cardContent.title + '</h3>';
