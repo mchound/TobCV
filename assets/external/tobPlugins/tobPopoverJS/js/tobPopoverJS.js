@@ -10,22 +10,27 @@
             // Fetch objects
             var hide = true;
             var anchorLink = $(this);
-            var anchorParentContainer = $(anchorLink).parent().parent();
+            var div = $(anchorLink).parent().parent().parent();
             var content = CreateCardContent(cardContent);
             // Inject HTML markup
-            $(anchorParentContainer).append(content);
-            var popoverContainer = $(anchorLink).parent().siblings('div');
+            $(div).append(content);
+            var popoverContainer = $(div).children('.tobPopover');
 
             // Set parent to positon: relative to be able to see a absolute positioned child
-            $(anchorParentContainer).css('position', 'relative');
+            $(div).css('position', 'relative');
 
             // Calculate and set the left offset so that the popover arrow points to the end of the anchor link
-            var leftOffset = $(anchorLink).siblings('b').width() + $(anchorLink).width() + 10;            
+            var anchorLeft = $(anchorLink).position().left;
+            var containerLeft = $(popoverContainer).position().left;
+            var leftOffset = anchorLeft - containerLeft + $(anchorLink).width()-10;//$(anchorLink).siblings('b').width() + $(anchorLink).width() + 10;
             $(popoverContainer).css('left', leftOffset);
 
             // Offset popover from bottom. Move it half its height - parents top, bottom padding            
             var bottomOffset = -1 * ($(popoverContainer).outerHeight() / 2 - 20);
             $(popoverContainer).css('bottom', bottomOffset);
+
+            
+
 
             // The hover event
             $(anchorLink).hover(
@@ -54,7 +59,7 @@
 })(jQuery);
 
 function CreateCardContent(cardContent){
-    var content = '<div class="tobPopover appBorderColor"><div><h2>' + cardContent.name + '</h2></div>';
+    var content = '<div class="tobPopover appBorderColor"><div><h2>' + cardContent.name + '</h2>';
 
     if(cardContent.title != undefined || cardContent.title != "")
         content += '<h3>' + cardContent.title + '</h3>';
@@ -68,7 +73,7 @@ function CreateCardContent(cardContent){
     if(cardContent.phone != undefined || cardContent.phone != "")
         content += '<span>m:<p>' + cardContent.phone + '</p></span>';
 
-    content += '<div class="appBorderColor arrow"></div></div>';
+    content += '<div class="appBorderColor arrow"></div></div></div>';
 
     return content;
 }

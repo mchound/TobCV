@@ -9,11 +9,15 @@
     padding: 10px;
 }
 
+    .tobPopover div {
+        clear: both;
+    }
+
 .tobPopover h2{
 	font-size: 20px;
 	margin: 5px 0px 0px 5px;
 	line-height: 18px;
-    float: left;
+    display: inline-block;
 }
 
 .tobPopover h3{
@@ -21,6 +25,7 @@
 	margin: 4px 0px 0px 5px;
 	display: block;
 	line-height: 10px;
+    display: inline-block;
 }
 
 .tobPopover span{
