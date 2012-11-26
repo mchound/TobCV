@@ -355,12 +355,12 @@ a:hover {
         clear: left;
     }
 
-        .businessCard span p {
-                font-size: 14px;
-	            margin-left: 5px;
-                clear: none;
-                display: inline;
-            }
+    .businessCard p {
+            font-size: 14px;
+	        margin-left: 5px;
+            float: left;
+            display: inline;
+        }
 
     .businessCard a{
 	    font-size: 14px;

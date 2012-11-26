@@ -12,7 +12,7 @@
 				var pxPerMonth;
 				
                 // Search DOM for engagement with attribute 'timeline'
-				$.each($(this).find('[timeline]'), function(index, domElement){
+				$.each($(this).find('[data-timeline]'), function(index, domElement){
 				    var ms = new Engagement(domElement);
 					totalMonthCount += ms.monthSpan;
 					engagements.push(ms);					
@@ -131,18 +131,18 @@ function Engagement(domElement){
 	var self = this;
 	self.element = domElement;
 	self.scrollTop = $(self.element).offset().top;
-	self.label = $(self.element).attr('timeline');
-	self.startYear = parseInt($(self.element).attr('timeline-start-date').split(';')[0]);
-	self.startMonth = parseInt($(self.element).attr('timeline-start-date').split(';')[1]);
+	self.label = $(self.element).attr('data-timeline');
+	self.startYear = parseInt($(self.element).attr('data-timeline-start-date').split(';')[0]);
+	self.startMonth = parseInt($(self.element).attr('data-timeline-start-date').split(';')[1]);
 	self.marginRight = 0;
 	
 	var now = new Date();
 	self.endYear = now.getFullYear();
 	self.endMonth = now.getMonth();
-	var endDate = $(self.element).attr('timeline-end-date');
+	var endDate = $(self.element).attr('data-timeline-end-date');
 	if(endDate !== undefined){
-		self.endYear = parseInt($(self.element).attr('timeline-end-date').split(';')[0]);
-		self.endMonth = parseInt($(self.element).attr('timeline-end-date').split(';')[1]);
+		self.endYear = parseInt($(self.element).attr('data-timeline-end-date').split(';')[0]);
+		self.endMonth = parseInt($(self.element).attr('data-timeline-end-date').split(';')[1]);
 	}
 	
 	self.monthSpan = (self.endYear - self.startYear)*12-self.startMonth + self.endMonth; 
