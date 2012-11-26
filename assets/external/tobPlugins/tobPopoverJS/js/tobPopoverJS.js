@@ -1,9 +1,13 @@
-(function($) 
+// jQuery plugin to show popover when hovering a link and glue popover when link is clicked.
+// This plugin is specificly created for this template. Feel free to use it elsewhere, but several modifications might be needed to get it to work in other applications
+// MIT Licensed
+(function ($)
 {
     $.extend($.fn, {
 
         popover: function (cardContent) {
 
+            // Show popover only if cardContent is passed as parameter and name of the refrence is provided
             if (cardContent == undefined || cardContent.name == undefined || cardContent.name == "")
                 return;
 
@@ -12,8 +16,9 @@
             var anchorLink = $(this);
             var div = $(anchorLink).parent().parent().parent();
             var content = CreateCardContent(cardContent);
-            // Inject HTML markup
+            // Inject HTML markup for the popover
             $(div).append(content);
+            // Fetch the popover container
             var popoverContainer = $(div).children('.tobPopover');
 
             // Set parent to positon: relative to be able to see a absolute positioned child
@@ -29,8 +34,6 @@
             var bottomOffset = -1 * ($(popoverContainer).outerHeight() / 2 - 20);
             $(popoverContainer).css('bottom', bottomOffset);
 
-            
-
 
             // The hover event
             $(anchorLink).hover(
@@ -45,6 +48,7 @@
                     }
                 });
 
+            // Glue or release the popover when anchor is clicked
             $(anchorLink).click(function (e) {
                 e.preventDefault();
                 hide = !hide;
@@ -58,6 +62,7 @@
 		
 })(jQuery);
 
+// Function to create popover markup
 function CreateCardContent(cardContent){
     var content = '<div class="tobPopover appBorderColor"><h2>' + cardContent.name + '</h2>';
 
@@ -68,7 +73,7 @@ function CreateCardContent(cardContent){
         content += '<span>w:<a href="#">' + cardContent.webSite + '</a></span>';
 
     if(cardContent.mail != undefined && cardContent.mail != "")
-        content += '<span>m:<a href="#">' + cardContent.mail + '</a></span>';
+        content += '<span>m:<a href="mailto:' + cardContent.mail + '">' + cardContent.mail + '</a></span>';
 
     if(cardContent.phone != undefined && cardContent.phone != "")
         content += '<span>p:<p>' + cardContent.phone + '</p></span>';

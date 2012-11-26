@@ -25,7 +25,6 @@
  .timeline .startStop .timeMarker{
 	height: 30px;
 	width: 15px;
-	background-color: #008000;
 	float: right;
 	margin-right: 0px;
 	position: absolute;
@@ -33,7 +32,7 @@
     right: 17px;
  }
  
- .timeline .startStop .line .milestoneMarker{
+ .timeline .startStop .line .engagementMarker{
 	height: 10px;
 	width: 50px;
 	border-right: 3px solid #ffffff;
@@ -48,7 +47,7 @@
 	margin-top: 15px;
  }
  
- .timeline .startStop .line .milestoneMarker a{
+ .timeline .startStop .line .engagementMarker a{
 	font-size: 10px;
 	display: block;
 	position: relative;	
@@ -61,5 +60,5 @@
  }
  
  .timeline .startStop .line .odd a{
-	top: 10px;
+	top: 13px;
  }

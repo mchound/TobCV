@@ -108,7 +108,7 @@ a:hover {
 }
 
     .personalInfoContainer > div:nth-child(1) {
-        border: none;
+        border-bottom: 1px solid #e1e1e1;
     }
 
     .personalInfoContainer > div:nth-child(2) {
@@ -128,7 +128,7 @@ a:hover {
     background-repeat: repeat-x;
     width: 100%;
     background-color: #ffffff;
-    border: none;
+    border-top: 1px solid #e1e1e1;
 }
 
 .section {
@@ -148,7 +148,6 @@ a:hover {
     .sectionHeader h2 {
         color: #ffffff;
         line-height: 40px;
-        font-size: 30px;
     }
 
 .sectionBody {
@@ -164,8 +163,6 @@ a:hover {
 .itemHeader {
     width: 100%;
     background-image: url('../img/whiteStripes.png');
-    border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
 }
 
     .itemHeader > div {
@@ -209,21 +206,18 @@ a:hover {
 /* Skills, additional info */
 .skill, .addInfo {
     margin-bottom: 25px;
-    clear: both;
 }
 
     .skill h2, .addInfo h2 {
         color: #646464;
-        float: left;
     }
 
 .skillRatingBox {
     width: 340px;
     height: 20px;
-    border: 0px solid #e1e1e1;
+    border: 1px solid #e1e1e1;
     background-color: #fcfcfc;
     margin-top: 5px;
-    float: left;
 }
 
 [class*="skillLevel"] {
@@ -236,13 +230,12 @@ a:hover {
 }
 
 .addAnswear {
-    padding-top: 0px;
-    border-bottom-right-radius: 0px;
+    padding: 5px;
+    border-bottom-right-radius: 8px;
     color: #ffffff;
-    text-align: left;
-    float: left;
+    text-align: center;
+    width: 100px;
     margin-top: 5px;
-    margin-left: 10px;
 }
 
 .skillLevel10 {
@@ -328,6 +321,72 @@ a:hover {
 
 /* Buisness card
 ======================================================*/
-.no-print {
-    display: none;
+.businessCard{
+	display: block;	
+	background-color: #f1f1f1;
+	border-top-width: 6px;
+    border-top-style: solid;
+	position: fixed;
+	left: 25px;
+	top: 25px;
+	display: none;
+    padding: 10px;
 }
+
+    .businessCard h2{
+	    font-size: 20px;
+	    margin: 5px 0px 0px 5px;
+	    display: block;
+	    line-height: 18px;
+    }
+
+    .businessCard h3{
+	    font-size: 12px;
+	    margin: 4px 0px 0px 5px;
+	    display: block;
+	    line-height: 10px;
+    }
+
+    .businessCard span{
+	    font-size: 14px;
+	    margin-left: 5px;
+	    line-height: 20px;
+        display: block;
+        clear: left;
+    }
+
+        .businessCard span p {
+                font-size: 14px;
+	            margin-left: 5px;
+                clear: none;
+                display: inline;
+            }
+
+    .businessCard a{
+	    font-size: 14px;
+	    margin-left: 5px;
+    }
+
+    .businessCard .delimiter{
+	    width: 100%;
+	    border-bottom: 1px solid #ffffff;
+	    border-top: 1px solid #e1e1e1;
+	    margin: 10px 0px 10px 0px
+    }
+
+.colorPicker {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000000;
+    background-color: #555555;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    background-image: url('../img/colorpicker.png');
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+    .colorPicker:hover {
+        cursor: pointer;
+    }

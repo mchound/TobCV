@@ -1,5 +1,14 @@
 $(function(){
 	
+    colorPickerOptions = {
+        onChange: function (hsb, hex, rgb) {
+            ChangeAppColor(hex);
+        }
+    };
+
+    $('.colorPicker').ColorPicker(colorPickerOptions);
+
+    // show/hide business card on scroll event
 	$(window).scroll(function(){
 		if(scrollPos = $(document).scrollTop() >= 250 ){
 			$('#businessCard').fadeIn('slow', function(){});
@@ -9,8 +18,10 @@ $(function(){
 		}		
 	});
 	
-    //$(".cvBody").timeline();
+    // Initialize timeline plugin
+	$(".mainBody").timeline();
 
+    // Initialize popover plugin
 	$('#Napoleon').popover({
 	    name: 'Napoleon Bonaparte',
 	    title: 'COMMANDER IN CHIEF',
@@ -42,3 +53,22 @@ $(function(){
 	});
 
 });
+
+function ChangeAppColor(hexColor) {
+
+    var file;
+    $.each(document.styleSheets, function (index, stylesheet) {
+        $.each(stylesheet.cssRules, function (index, rule) {
+            if (rule.selectorText == '.appBgColor') {
+                rule.style.backgroundColor = '#' + hexColor;
+            }
+            else if (rule.selectorText == '.appBorderColor') {
+                rule.style.borderColor = '#' + hexColor;
+            }
+            else if (rule.selectorText == '.appFontColor') {
+                rule.style.color = '#' + hexColor;
+            }
+        });
+    });
+
+}
