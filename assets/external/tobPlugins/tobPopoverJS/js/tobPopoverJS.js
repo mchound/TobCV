@@ -22,7 +22,7 @@
             // Calculate and set the left offset so that the popover arrow points to the end of the anchor link
             var anchorLeft = $(anchorLink).position().left;
             var containerLeft = $(popoverContainer).position().left;
-            var leftOffset = anchorLeft - containerLeft + $(anchorLink).width()-10;//$(anchorLink).siblings('b').width() + $(anchorLink).width() + 10;
+            var leftOffset = anchorLeft - containerLeft + $(anchorLink).width()-10;
             $(popoverContainer).css('left', leftOffset);
 
             // Offset popover from bottom. Move it half its height - parents top, bottom padding            
@@ -59,21 +59,21 @@
 })(jQuery);
 
 function CreateCardContent(cardContent){
-    var content = '<div class="tobPopover appBorderColor"><div><h2>' + cardContent.name + '</h2>';
+    var content = '<div class="tobPopover appBorderColor"><h2>' + cardContent.name + '</h2>';
 
-    if(cardContent.title != undefined || cardContent.title != "")
-        content += '<h3>' + cardContent.title + '</h3>';
+    if(cardContent.title != undefined && cardContent.title != "")
+        content += '<h3>' + cardContent.title + '</h3><div class="delimiter"></div>';
 
-    if(cardContent.webSite != undefined || cardContent.webSite != "")
-        content += '<div class="delimiter"></div><span>w:<a href="#">' + cardContent.webSite + '</a></span>';
+    if(cardContent.webSite != undefined && cardContent.webSite != "")
+        content += '<span>w:<a href="#">' + cardContent.webSite + '</a></span>';
 
-    if(cardContent.mail != undefined || cardContent.mail != "")
+    if(cardContent.mail != undefined && cardContent.mail != "")
         content += '<span>m:<a href="#">' + cardContent.mail + '</a></span>';
 
-    if(cardContent.phone != undefined || cardContent.phone != "")
-        content += '<span>m:<p>' + cardContent.phone + '</p></span>';
+    if(cardContent.phone != undefined && cardContent.phone != "")
+        content += '<span>p:<p>' + cardContent.phone + '</p></span>';
 
-    content += '<div class="appBorderColor arrow"></div></div></div>';
+    content += '<div class="appBorderColor arrow"></div></div>';
 
     return content;
 }
