@@ -163,21 +163,18 @@ a:hover {
 .itemHeader {
     width: 100%;
     background-image: url('../img/whiteStripes.png');
+    padding: 10px;
 }
 
-    .itemHeader > div {
-        padding: 10px;
-    }
-
-    .itemHeader > div:nth-child(1) {
+    .itemHeader .itemTitle {
         float: left;
     }
 
-    .itemHeader > div:nth-child(2) {
+    .itemHeader .itemInfo {
         float: right;
     }
 
-        .itemHeader > div:nth-child(2) span {
+        .itemHeader span {
             display: block;
         }
 
@@ -368,7 +365,6 @@ a:hover {
     }
 
     .businessCard .delimiter{
-	    width: 100%;
 	    border-bottom: 1px solid #ffffff;
 	    border-top: 1px solid #e1e1e1;
 	    margin: 10px 0px 10px 0px

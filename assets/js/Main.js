@@ -56,19 +56,24 @@ $(function(){
 
 function ChangeAppColor(hexColor) {
 
-    var file;
-    $.each(document.styleSheets, function (index, stylesheet) {
-        $.each(stylesheet.cssRules, function (index, rule) {
-            if (rule.selectorText == '.appBgColor') {
-                rule.style.backgroundColor = '#' + hexColor;
-            }
-            else if (rule.selectorText == '.appBorderColor') {
-                rule.style.borderColor = '#' + hexColor;
-            }
-            else if (rule.selectorText == '.appFontColor') {
-                rule.style.color = '#' + hexColor;
-            }
-        });
-    });
+    $('.appBgColor').css('background-color', '#' + hexColor);
+    $('.appFontColor').css('color', '#' + hexColor);
+    $('.appBorderColor').css('border-color', '#' + hexColor);
+
+    //var styleSheets = document.styleSheets;
+    //$.each(styleSheets, function (index, stylesheet) {
+    //    var cssRules = stylesheet.cssRules;
+    //    $.each(cssRules, function (index, rule) {
+    //        if (rule.selectorText == '.appBgColor') {
+    //            rule.style.backgroundColor = '#' + hexColor;
+    //        }
+    //        else if (rule.selectorText == '.appBorderColor') {
+    //            rule.style.borderColor = '#' + hexColor;
+    //        }
+    //        else if (rule.selectorText == '.appFontColor') {
+    //            rule.style.color = '#' + hexColor;
+    //        }
+    //    });
+    //});
 
 }

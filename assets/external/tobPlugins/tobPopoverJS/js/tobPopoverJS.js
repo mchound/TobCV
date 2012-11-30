@@ -16,8 +16,8 @@
             var anchorLink = $(this);
             var div = $(anchorLink).parent().parent().parent();
             var content = CreateCardContent(cardContent);
-            // Inject HTML markup for the popover
-            $(div).append(content);
+            // Inject HTML markup for the popover. Could use $(div).append(content), but it won't work in IE7
+            $(content).appendTo(div);
             // Fetch the popover container
             var popoverContainer = $(div).children('.tobPopover');
 
