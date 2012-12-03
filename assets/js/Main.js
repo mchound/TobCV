@@ -28,7 +28,7 @@ $(function(){
 	    webSite: 'www.napoleon.com',
 	    mail: 'napoleon.bonaparte@napoleon.fr',
 	    phone: '+46 (0)70-123 45 67'
-	});
+	}, '#CC3300');
 
 	$('#Governor_Dinwiddie').popover({
 	    name: 'Governor Dinwiddie',
@@ -36,21 +36,21 @@ $(function(){
 	    webSite: 'www.dinwiddie.gov',
 	    mail: 'governor@dinwiddie.gov',
 	    phone: '+46 (0)70-987 65 43'
-	});
+	}, '#CC3300');
 
 	$('#lord_fairfax').popover({
 	    name: 'Thomas Lord Fairfax',
 	    title: 'GENERAL',
 	    mail: 'fairfax@parlament.com',
 	    phone: '+46 (0)70-111 22 33'
-	});
+	}, '#CC3300');
 
 	$('#lord_fairfax2').popover({
 	    name: 'Thomas Lord Fairfax',
 	    title: 'GENERAL',
 	    mail: 'fairfax@parlament.com',
 	    phone: '+46 (0)70-111 22 33'
-	});
+	}, '#CC3300');
 
 });
 
@@ -59,21 +59,6 @@ function ChangeAppColor(hexColor) {
     $('.appBgColor').css('background-color', '#' + hexColor);
     $('.appFontColor').css('color', '#' + hexColor);
     $('.appBorderColor').css('border-color', '#' + hexColor);
-
-    //var styleSheets = document.styleSheets;
-    //$.each(styleSheets, function (index, stylesheet) {
-    //    var cssRules = stylesheet.cssRules;
-    //    $.each(cssRules, function (index, rule) {
-    //        if (rule.selectorText == '.appBgColor') {
-    //            rule.style.backgroundColor = '#' + hexColor;
-    //        }
-    //        else if (rule.selectorText == '.appBorderColor') {
-    //            rule.style.borderColor = '#' + hexColor;
-    //        }
-    //        else if (rule.selectorText == '.appFontColor') {
-    //            rule.style.color = '#' + hexColor;
-    //        }
-    //    });
-    //});
-
+    $('.arrow').css('border-right-color', '#' + hexColor);
+    $('.tobPopover').css('border-color', '#' + hexColor);
 }

@@ -5,7 +5,7 @@
 {
     $.extend($.fn, {
 
-        popover: function (cardContent) {
+        popover: function (cardContent, borderColor) {
 
             // Show popover only if cardContent is passed as parameter and name of the refrence is provided
             if (cardContent == undefined || cardContent.name == undefined || cardContent.name == "")
@@ -15,7 +15,7 @@
             var hide = true;
             var anchorLink = $(this);
             var div = $(anchorLink).parent().parent().parent();
-            var content = CreateCardContent(cardContent);
+            var content = CreateCardContent(cardContent, borderColor);
             // Inject HTML markup for the popover. Could use $(div).append(content), but it won't work in IE7
             $(content).appendTo(div);
             // Fetch the popover container
@@ -27,7 +27,9 @@
             // Calculate and set the left offset so that the popover arrow points to the end of the anchor link
             var anchorLeft = $(anchorLink).position().left;
             var containerLeft = $(popoverContainer).position().left;
-            var leftOffset = anchorLeft - containerLeft + $(anchorLink).width()-10;
+            var leftOffset = anchorLeft - containerLeft + $(anchorLink).width() - 10;
+            if (ie7())
+                leftOffset -= 602;
             $(popoverContainer).css('left', leftOffset);
 
             // Offset popover from bottom. Move it half its height - parents top, bottom padding            
@@ -63,8 +65,8 @@
 })(jQuery);
 
 // Function to create popover markup
-function CreateCardContent(cardContent){
-    var content = '<div class="tobPopover appBorderColor"><h2>' + cardContent.name + '</h2>';
+function CreateCardContent(cardContent, borderColor){
+    var content = '<div class="tobPopover" style="border-color:' + borderColor + '"><h2>' + cardContent.name + '</h2>';
 
     if(cardContent.title != undefined && cardContent.title != "")
         content += '<h3>' + cardContent.title + '</h3><div class="delimiter"></div>';
@@ -78,8 +80,19 @@ function CreateCardContent(cardContent){
     if(cardContent.phone != undefined && cardContent.phone != "")
         content += '<span>p:<p>' + cardContent.phone + '</p></span>';
 
-    content += '<div class="appBorderColor arrow"></div></div>';
+    content += '<div class="arrow" style="border-right-color:' + borderColor + '"></div></div>';
 
     return content;
+}
+
+function ie7() {
+    
+    var version = 999; // we assume a sane browser
+    if (navigator.appVersion.indexOf("MSIE") != -1)
+        // bah, IE again, lets downgrade version number
+        version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+    if (version <= 7)
+        return true;
+    return false;        
 }
 
