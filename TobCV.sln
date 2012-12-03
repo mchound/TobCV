@@ -22,6 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{EF37BFBB-8F99-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{C8FB248C-1C8E-4283-BE20-867DEC5BD342}"
 	ProjectSection(SolutionItems) = preProject
+		assets\img\bg.png = assets\img\bg.png
 		assets\img\colorpicker.png = assets\img\colorpicker.png
 		assets\img\headerEdge.png = assets\img\headerEdge.png
 		assets\img\shadow.png = assets\img\shadow.png
@@ -130,12 +131,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{F8596A82-38E
 		assets\external\colorpicker\css\layout.css = assets\external\colorpicker\css\layout.css
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "help", "help", "{5AEDADA3-0E4B-4D36-B8E3-9C1622B7C6C9}"
+	ProjectSection(SolutionItems) = preProject
+		help\help.html = help\help.html
+		help\styles.css = help\styles.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8F69B1A7-92FB-40EB-8560-F9E613647492} = {E0A99116-04F0-4403-A188-E8E732DF9105}
+		{5AEDADA3-0E4B-4D36-B8E3-9C1622B7C6C9} = {E0A99116-04F0-4403-A188-E8E732DF9105}
 		{F57ADAF3-9020-4658-BE38-A95A872A5350} = {8F69B1A7-92FB-40EB-8560-F9E613647492}
 		{EF37BFBB-8F99-4FDD-9880-25F05FAF1A69} = {8F69B1A7-92FB-40EB-8560-F9E613647492}
 		{C8FB248C-1C8E-4283-BE20-867DEC5BD342} = {8F69B1A7-92FB-40EB-8560-F9E613647492}

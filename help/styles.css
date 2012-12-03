@@ -1,0 +1,21 @@
+﻿body{
+    font: normal 18px Calibri;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #222222;
+    padding: 20px;
+}
+
+p {
+    width: 50%;
+}
+
+ol li {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+ul li {
+    margin-top: 0px;
+    font-weight: normal;
+}

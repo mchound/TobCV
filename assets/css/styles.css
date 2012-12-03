@@ -6,6 +6,7 @@ body{
     font-family: Calibri;
     color: #333;
     letter-spacing: 0px;
+    background-image: url('../img/bg3.png');
 }
 
 div, ul, p, h1, h2, img {
@@ -162,7 +163,7 @@ a:hover {
 /* Item header, top info */
 .itemHeader {
     width: 100%;
-    background-image: url('../img/whiteStripes.png');
+    background-image: url('../img/darkStripes.png');
     padding: 10px;
 }
 
