@@ -51,7 +51,7 @@
 					else{
 					    this.$mileStoneMarker.addClass('engagementMarker odd');
 					}
-					this.$mileStoneMarker.append('<a href="#' + milestone.label + '" class="milestoneLink">' + month[milestone.startMonth - 1] + ', ' + milestone.startYear + '</a>');
+					this.$mileStoneMarker.append('<a href="#' + milestone.label + '" class="milestoneLink" title="' + milestone.label + '">' + month[milestone.startMonth - 1] + ', ' + milestone.startYear + '</a>');
 					milestone.marginRight = parseInt(milestone.monthSpan * pxPerMonth-53);
 					this.$mileStoneMarker.css('margin-right', milestone.marginRight);
 					
