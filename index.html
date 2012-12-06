@@ -4,8 +4,8 @@
 <head>
     <!-- Meta Data ===================================================================================-->
 	<!-- =============================================================================================-->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" /> 
+    <meta charset="utf-8" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Stylesheets =================================================================================-->
 	<!-- =============================================================================================-->
 	<link href="assets/external/tobPlugins/tobTimelineJS/css/style.css" rel="stylesheet" />    
@@ -31,7 +31,8 @@
     </script>
 </head>
 <body>
-
+        
+        
         <!--Container for all content-->
         <div class="container">
 
@@ -276,7 +277,7 @@
         
                         <!--The business card. Add the same info here as in the header -->
                         <!--This is optional, but if you remove it, also remove it in Main.js. See documentation for further info-->
-                        <div class=" no-print">
+                        <div class="no-print">
                             <div class="businessCard appBorderColor no-print" id="businessCard">
 <!--Name-->     		        <h2>George Washington</h2>
 <!--Title-->    		        <h3>PRESIDENT CANDIDATE</h3>
@@ -289,11 +290,11 @@
 				
 		                <!--Markup for the data-timeline. If you change this, them data-timeline plugin might stop working-->
                         <!--This is optional, but if you remove it, also remove it in Main.js. See documentation for further info-->
-				        <div class="timeline"><div class="startStop"><div class="line"></div><div class="timeMarker appBgColor"></div></div></div>
+				        <div class="timeline only-desktop"><div class="startStop"><div class="line"></div><div class="timeMarker appBgColor"></div></div></div>
                         
                         <!--This should not be here in production envoirement-->
                         <!--This is for test purpose to allow you to change application color in the browser-->
-                        <div class="colorPicker" title="Change application color"></div>
+                        <div class="colorPicker only-desktop" title="Change application color"></div>
 				
     
         <!-- Scripts ========================================================================================-->
