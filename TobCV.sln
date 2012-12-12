@@ -134,6 +134,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "help", "help", "{5AEDADA3-0E4B-4D36-B8E3-9C1622B7C6C9}"
 	ProjectSection(SolutionItems) = preProject
 		help\help.html = help\help.html
+		help\prew_headerEdge.png = help\prew_headerEdge.png
 		help\styles.css = help\styles.css
 	EndProjectSection
 EndProject

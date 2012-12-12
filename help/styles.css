@@ -19,3 +19,16 @@ ul li {
     margin-top: 0px;
     font-weight: normal;
 }
+
+table {
+    width: 800px;
+}
+
+table thead tr th{
+    border-bottom: 1px solid #ffffff;
+}
+
+table tbody tr td {
+    font-weight: normal;
+    padding: 15px;
+}
